@@ -6,8 +6,15 @@ body {
   background-color: #548687;
   text-align: center;
 }
-
-.container {
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+#container {
   height: 70vh;
   display: flex;
   justify-content: center;
@@ -54,6 +61,7 @@ body {
 #msg {
   color: #ffffc7;
   font-size: 8vmin;
+  width: 70vmin;
 }
 .msg-container {
   height: 100vmin;
@@ -65,5 +73,5 @@ body {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }

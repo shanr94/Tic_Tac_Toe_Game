@@ -3,6 +3,7 @@ let resetBtn = document.querySelector("#reset-btn");
 let turn0 = true; //playerX, playerO
 let newgameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
+let main = document.querySelector("main");
 let msg = document.querySelector("#msg");
 
 const winPatterns = [
@@ -20,6 +21,7 @@ const resetGame = () => {
   turn0 = true;
   enableBoxes();
   msgContainer.classList.add("hide");
+  main.classList.remove("hide");
 };
 
 boxes.forEach((box) => {
@@ -55,6 +57,7 @@ const enableBoxes = () => {
 const showWinner = (winner) => {
   msg.innerText = `Congratulations, Winner is ${winner}`;
   msgContainer.classList.remove("hide");
+  main.classList.add("hide");
   disableBoxes();
 };
 
